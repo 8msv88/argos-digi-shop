@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3000 Robux — Argo's Digi Shop</title>
+  <meta name="description" content="Buy 3000 Robux. Secure checkout and digital delivery.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,11 +12,15 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Argo's Digi Shop</a>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">A</span>
+        Argo's Digi Shop
+      </a>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="3000-robux.html" class="active">Shop</a>
+        <a href="index.html">Catalog</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#faq">FAQ</a>
       </nav>
     </div>
   </header>
@@ -24,20 +29,27 @@
     <section class="product-page">
       <div class="container product-layout">
         <div class="product-info">
-          <p class="breadcrumb"><a href="index.html">Home</a> / 3000 Robux</p>
+          <p class="breadcrumb"><a href="index.html">Catalog</a> <span>/</span> 3000 Robux</p>
+          <div class="product-icon robux large">R$</div>
           <h1>3000 Robux</h1>
+          <p class="product-price">~$10 · Digital delivery</p>
           <p class="product-desc">
-            Instant digital delivery. Complete payment below and your Robux will be processed promptly.
+            Standard Robux pack. After your payment confirms, the order is processed and the Robux credit is delivered according to the fulfillment method for this listing.
           </p>
           <ul class="product-features">
             <li>3000 Robux credit</li>
-            <li>Fast delivery after payment</li>
-            <li>Secure checkout</li>
+            <li>Processed after payment confirmation</li>
+            <li>Secure NowPayments checkout</li>
+            <li>No password required</li>
           </ul>
+          <a href="index.html" class="back-link">← Back to catalog</a>
         </div>
 
         <div class="payment-box">
-          <h2>Checkout</h2>
+          <div class="payment-head">
+            <h2>Checkout</h2>
+            <p>Complete payment below to place your order.</p>
+          </div>
           <div class="iframe-wrap">
             <iframe
               src="https://nowpayments.io/embeds/payment-widget?iid=6103315017"
@@ -46,6 +58,7 @@
               frameborder="0"
               scrolling="no"
               style="overflow-y: hidden;"
+              title="Payment widget"
             ></iframe>
           </div>
         </div>
@@ -54,8 +67,9 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Argo's Digi Shop</p>
+    <div class="container footer-inner">
+      <span class="footer-brand">Argo's Digi Shop</span>
+      <p>Digital Roblox items · Secure checkout · 2026</p>
     </div>
   </footer>
 </body>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — Argo's Digi Shop</title>
+  <meta name="description" content="Digital Roblox item checkout.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">A</span>
+        Argo's Digi Shop
+      </a>
+      <nav class="nav">
+        <a href="index.html">Catalog</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-page">
+      <div class="container product-layout">
+        <div class="product-info">
+          <p class="breadcrumb"><a href="index.html">Catalog</a> <span>/</span> <span id="crumb-name">Item</span></p>
+          <div class="product-icon" id="p-icon">·</div>
+          <h1 id="p-title">Item</h1>
+          <p class="product-price">~$10 · Digital delivery</p>
+          <p class="product-desc" id="p-desc"></p>
+          <ul class="product-features" id="p-features"></ul>
+          <a href="index.html" class="back-link">← Back to catalog</a>
+        </div>
+
+        <div class="payment-box">
+          <div class="payment-head">
+            <h2>Checkout</h2>
+            <p>Complete payment below to place your order.</p>
+          </div>
+          <div class="iframe-wrap">
+            <iframe
+              src="https://nowpayments.io/embeds/payment-widget?iid=6103315017"
+              width="410"
+              height="696"
+              frameborder="0"
+              scrolling="no"
+              style="overflow-y: hidden;"
+              title="Payment widget"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">Argo's Digi Shop</span>
+      <p>Digital Roblox items · Secure checkout · 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const catalog = {
+      'robux-800': {
+        title: '800 Robux',
+        icon: 'R$',
+        iconClass: 'robux',
+        desc: 'Smaller Robux pack for quick top-ups, limited purchases, or finishing a cart. Delivered after payment confirms.',
+        features: ['800 Robux credit', 'Processed after payment confirmation', 'Secure checkout', 'No password required']
+      },
+      'premium-1m': {
+        title: 'Premium 1 Month',
+        icon: 'P',
+        iconClass: 'premium',
+        desc: 'One month of Roblox Premium. Ideal for trading benefits, monthly stipends, and premium-only features.',
+        features: ['30 days Premium', 'Stipend & trading benefits', 'Processed after payment', 'Delivery instructions provided']
+      },
+      'gamepass': {
+        title: 'Game Pass Bundle',
+        icon: 'GP',
+        iconClass: 'pass',
+        desc: 'Assistance purchasing a game pass or small bundle in a game you choose, within the listed price range.',
+        features: ['You specify the game / pass', 'Purchase assistance after payment', 'Clear order notes required', 'No account password needed']
+      },
+      'limited': {
+        title: 'Limited Item Assist',
+        icon: 'LT',
+        iconClass: 'limited',
+        desc: 'Help acquiring a limited or UGC item priced around the $10 range. Details coordinated after checkout.',
+        features: ['Target item in ~$10 range', 'Coordination after payment', 'Transparent process', 'No password required']
+      },
+      'group-funds': {
+        title: 'Group Funds Top-up',
+        icon: 'G',
+        iconClass: 'group',
+        desc: 'Roblox group funds credit for group owners and developers. Useful for payouts and group store ops.',
+        features: ['Group funds credit', 'Owner/dev use cases', 'Processed after confirmation', 'Delivery details shared post-pay']
+      },
+      'account-boost': {
+        title: 'Account Boost Pack',
+        icon: '+',
+        iconClass: 'boost',
+        desc: 'Starter package for newer accounts: Robux allocation plus guidance toward Premium trial / early setup.',
+        features: ['Starter Robux component', 'Setup guidance included', 'Digital delivery', 'No password sharing']
+      },
+      'gift-card': {
+        title: 'Roblox Gift Card Code',
+        icon: 'GC',
+        iconClass: 'gift',
+        desc: 'Digital gift card code redeemable on Roblox. Code delivered after payment confirms.',
+        features: ['Redeemable Roblox code', 'Sent after payment clears', 'Standard face value tier', 'Keep code private until redeemed']
+      }
+    };
+
+    const params = new URLSearchParams(location.search);
+    const key = params.get('item') || 'robux-800';
+    const item = catalog[key] || catalog['robux-800'];
+
+    document.getElementById('p-title').textContent = item.title;
+    document.getElementById('crumb-name').textContent = item.title;
+    document.getElementById('p-desc').textContent = item.desc;
+    document.title = item.title + " — Argo's Digi Shop";
+
+    const icon = document.getElementById('p-icon');
+    icon.textContent = item.icon;
+    icon.className = 'product-icon large ' + item.iconClass;
+
+    const list = document.getElementById('p-features');
+    item.features.forEach(f => {
+      const li = document.createElement('li');
+      li.textContent = f;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

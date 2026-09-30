@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Argo's Digi Shop</title>
+  <title>Argo's Digi Shop — Digital Roblox Items</title>
+  <meta name="description" content="Fast, reliable digital Roblox items. Robux, limiteds, game passes, and more.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,11 +12,15 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Argo's Digi Shop</a>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">A</span>
+        Argo's Digi Shop
+      </a>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="3000-robux.html">Shop</a>
+        <a href="index.html" class="active">Catalog</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
       </nav>
     </div>
   </header>
@@ -23,40 +28,162 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Digital items, delivered fast.</h1>
-        <p class="subtitle">Trusted marketplace for Robux, game currency, and more. Instant delivery after payment.</p>
-        <a href="3000-robux.html" class="btn">Browse items</a>
+        <p class="eyebrow">Digital marketplace</p>
+        <h1>Roblox items.<br>Delivered clean.</h1>
+        <p class="subtitle">Robux packs, limiteds, game passes, and account boosts. Secure checkout, fast delivery after payment confirms.</p>
       </div>
     </section>
 
-    <section class="products">
+    <section class="catalog" id="catalog">
       <div class="container">
-        <h2>Featured</h2>
+        <div class="section-head">
+          <h2>Catalog</h2>
+          <p class="section-sub">All items priced around the $10 range. Instant digital fulfillment.</p>
+        </div>
+
         <div class="product-grid">
-          <a href="3000-robux.html" class="product-card">
-            <div class="product-icon">R$</div>
+          <a href="3000-robux.html" class="product-card featured">
+            <div class="card-top">
+              <span class="badge">Popular</span>
+              <div class="product-icon robux">R$</div>
+            </div>
             <h3>3000 Robux</h3>
-            <p class="price">Instant delivery</p>
-            <span class="card-cta">Buy now →</span>
+            <p class="card-desc">Standard Robux pack. Credited after payment clears.</p>
+            <div class="card-footer">
+              <span class="price">~$10</span>
+              <span class="cta">Buy →</span>
+            </div>
+          </a>
+
+          <a href="product.html?item=robux-800" class="product-card">
+            <div class="card-top">
+              <div class="product-icon robux">R$</div>
+            </div>
+            <h3>800 Robux</h3>
+            <p class="card-desc">Smaller pack for quick top-ups and limited buys.</p>
+            <div class="card-footer">
+              <span class="price">~$10</span>
+              <span class="cta">Buy →</span>
+            </div>
+          </a>
+
+          <a href="product.html?item=premium-1m" class="product-card">
+            <div class="card-top">
+              <div class="product-icon premium">P</div>
+            </div>
+            <h3>Premium 1 Month</h3>
+            <p class="card-desc">Roblox Premium membership for 30 days.</p>
+            <div class="card-footer">
+              <span class="price">~$10</span>
+              <span class="cta">Buy →</span>
+            </div>
+          </a>
+
+          <a href="product.html?item=gamepass" class="product-card">
+            <div class="card-top">
+              <div class="product-icon pass">GP</div>
+            </div>
+            <h3>Game Pass Bundle</h3>
+            <p class="card-desc">Popular game pass purchase assistance (you choose the game).</p>
+            <div class="card-footer">
+              <span class="price">~$10</span>
+              <span class="cta">Buy →</span>
+            </div>
+          </a>
+
+          <a href="product.html?item=limited" class="product-card">
+            <div class="card-top">
+              <div class="product-icon limited">LT</div>
+            </div>
+            <h3>Limited Item Assist</h3>
+            <p class="card-desc">Help acquiring a limited/UGC item in the ~$10 range.</p>
+            <div class="card-footer">
+              <span class="price">~$10</span>
+              <span class="cta">Buy →</span>
+            </div>
+          </a>
+
+          <a href="product.html?item=group-funds" class="product-card">
+            <div class="card-top">
+              <div class="product-icon group">G</div>
+            </div>
+            <h3>Group Funds Top-up</h3>
+            <p class="card-desc">Roblox group funds credit for creators and owners.</p>
+            <div class="card-footer">
+              <span class="price">~$10</span>
+              <span class="cta">Buy →</span>
+            </div>
+          </a>
+
+          <a href="product.html?item=account-boost" class="product-card">
+            <div class="card-top">
+              <div class="product-icon boost">+</div>
+            </div>
+            <h3>Account Boost Pack</h3>
+            <p class="card-desc">Starter boost: Robux + Premium trial guidance for new accounts.</p>
+            <div class="card-footer">
+              <span class="price">~$10</span>
+              <span class="cta">Buy →</span>
+            </div>
+          </a>
+
+          <a href="product.html?item=gift-card" class="product-card">
+            <div class="card-top">
+              <div class="product-icon gift">GC</div>
+            </div>
+            <h3>Roblox Gift Card Code</h3>
+            <p class="card-desc">Digital gift card code redeemable on Roblox.</p>
+            <div class="card-footer">
+              <span class="price">~$10</span>
+              <span class="cta">Buy →</span>
+            </div>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="trust">
+    <section class="how" id="how">
       <div class="container">
-        <div class="trust-grid">
-          <div class="trust-item">
-            <strong>Fast delivery</strong>
-            <p>Items sent shortly after payment confirms.</p>
+        <div class="section-head">
+          <h2>How it works</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <h3>Pick an item</h3>
+            <p>Choose from the catalog. Each listing shows what you receive.</p>
           </div>
-          <div class="trust-item">
-            <strong>Secure payments</strong>
-            <p>Crypto and card options via trusted processors.</p>
+          <div class="step">
+            <span class="step-num">2</span>
+            <h3>Pay securely</h3>
+            <p>Checkout via the embedded payment widget. Crypto supported.</p>
           </div>
-          <div class="trust-item">
-            <strong>Simple process</strong>
-            <p>Choose item, pay, receive. No complicated steps.</p>
+          <div class="step">
+            <span class="step-num">3</span>
+            <h3>Receive delivery</h3>
+            <p>After confirmation, your order is processed and delivered digitally.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>How fast is delivery?</h3>
+            <p>Most orders are handled shortly after payment confirms. Exact timing depends on the item and network confirmation.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What payment methods work?</h3>
+            <p>The checkout widget accepts the methods shown at payment time, including cryptocurrency options via NowPayments.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need to share my password?</h3>
+            <p>No. Legitimate fulfillment never requires your Roblox password. Provide only what is requested for delivery (username / order notes).</p>
           </div>
         </div>
       </div>
@@ -64,8 +191,9 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Argo's Digi Shop</p>
+    <div class="container footer-inner">
+      <span class="footer-brand">Argo's Digi Shop</span>
+      <p>Digital Roblox items · Secure checkout · 2026</p>
     </div>
   </footer>
 </body>
