@@ -11,10 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="logo">
-        <span class="logo-mark">A</span>
+        <span class="logo-mark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </span>
         Argo's Digi Shop
       </a>
       <nav class="nav">
@@ -29,18 +34,28 @@
     <section class="product-page">
       <div class="container product-layout">
         <div class="product-info">
-          <p class="breadcrumb"><a href="index.html">Catalog</a> <span>/</span> <span id="crumb-name">Item</span></p>
-          <div class="product-icon" id="p-icon">·</div>
+          <p class="breadcrumb">
+            <a href="index.html">Catalog</a>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            <span id="crumb-name">Item</span>
+          </p>
+          <div class="product-icon large float-icon" id="p-icon"></div>
           <h1 id="p-title">Item</h1>
           <p class="product-price">~$10 · Digital delivery</p>
           <p class="product-desc" id="p-desc"></p>
           <ul class="product-features" id="p-features"></ul>
-          <a href="index.html" class="back-link">← Back to catalog</a>
+          <a href="index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to catalog
+          </a>
         </div>
 
         <div class="payment-box">
           <div class="payment-head">
-            <h2>Checkout</h2>
+            <h2>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              Checkout
+            </h2>
             <p>Complete payment below to place your order.</p>
           </div>
           <div class="iframe-wrap">
@@ -61,58 +76,73 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="footer-brand">Argo's Digi Shop</span>
+      <span class="footer-brand">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        Argo's Digi Shop
+      </span>
       <p>Digital Roblox items · Secure checkout · 2026</p>
     </div>
   </footer>
 
   <script>
+    const icons = {
+      robux: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>',
+      premium: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>',
+      pass: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>',
+      limited: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>',
+      group: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+      boost: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
+      gift: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>'
+    };
+
+    const check = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
     const catalog = {
       'robux-800': {
         title: '800 Robux',
-        icon: 'R$',
+        iconKey: 'robux',
         iconClass: 'robux',
         desc: 'Smaller Robux pack for quick top-ups, limited purchases, or finishing a cart. Delivered after payment confirms.',
         features: ['800 Robux credit', 'Processed after payment confirmation', 'Secure checkout', 'No password required']
       },
       'premium-1m': {
         title: 'Premium 1 Month',
-        icon: 'P',
+        iconKey: 'premium',
         iconClass: 'premium',
         desc: 'One month of Roblox Premium. Ideal for trading benefits, monthly stipends, and premium-only features.',
         features: ['30 days Premium', 'Stipend & trading benefits', 'Processed after payment', 'Delivery instructions provided']
       },
       'gamepass': {
         title: 'Game Pass Bundle',
-        icon: 'GP',
+        iconKey: 'pass',
         iconClass: 'pass',
         desc: 'Assistance purchasing a game pass or small bundle in a game you choose, within the listed price range.',
         features: ['You specify the game / pass', 'Purchase assistance after payment', 'Clear order notes required', 'No account password needed']
       },
       'limited': {
         title: 'Limited Item Assist',
-        icon: 'LT',
+        iconKey: 'limited',
         iconClass: 'limited',
         desc: 'Help acquiring a limited or UGC item priced around the $10 range. Details coordinated after checkout.',
         features: ['Target item in ~$10 range', 'Coordination after payment', 'Transparent process', 'No password required']
       },
       'group-funds': {
         title: 'Group Funds Top-up',
-        icon: 'G',
+        iconKey: 'group',
         iconClass: 'group',
         desc: 'Roblox group funds credit for group owners and developers. Useful for payouts and group store ops.',
         features: ['Group funds credit', 'Owner/dev use cases', 'Processed after confirmation', 'Delivery details shared post-pay']
       },
       'account-boost': {
         title: 'Account Boost Pack',
-        icon: '+',
+        iconKey: 'boost',
         iconClass: 'boost',
         desc: 'Starter package for newer accounts: Robux allocation plus guidance toward Premium trial / early setup.',
         features: ['Starter Robux component', 'Setup guidance included', 'Digital delivery', 'No password sharing']
       },
       'gift-card': {
         title: 'Roblox Gift Card Code',
-        icon: 'GC',
+        iconKey: 'gift',
         iconClass: 'gift',
         desc: 'Digital gift card code redeemable on Roblox. Code delivered after payment confirms.',
         features: ['Redeemable Roblox code', 'Sent after payment clears', 'Standard face value tier', 'Keep code private until redeemed']
@@ -128,14 +158,14 @@
     document.getElementById('p-desc').textContent = item.desc;
     document.title = item.title + " — Argo's Digi Shop";
 
-    const icon = document.getElementById('p-icon');
-    icon.textContent = item.icon;
-    icon.className = 'product-icon large ' + item.iconClass;
+    const iconEl = document.getElementById('p-icon');
+    iconEl.innerHTML = icons[item.iconKey] || icons.robux;
+    iconEl.className = 'product-icon large float-icon ' + item.iconClass;
 
     const list = document.getElementById('p-features');
     item.features.forEach(f => {
       const li = document.createElement('li');
-      li.textContent = f;
+      li.innerHTML = check + ' ' + f;
       list.appendChild(li);
     });
   </script>
