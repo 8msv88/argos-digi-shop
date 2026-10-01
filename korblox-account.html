@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Korblox Account — Argo's Digi Shop</title>
-  <meta name="description" content="Roblox Korblox account. Secure NowPayments checkout.">
+  <meta name="description" content="Roblox Korblox Deathspeaker account. Secure NowPayments checkout.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 </head>
 <body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
   <header class="header">
     <div class="wrap header-row">
       <a href="index.html" class="logo">Argo's Digi Shop</a>
@@ -31,10 +35,10 @@
             <span class="offer-stock">In stock</span>
           </div>
           <h1>Korblox Account</h1>
-          <p class="offer-lede">Roblox account that includes Korblox Deathwalker. Login credentials sent after payment confirms.</p>
+          <p class="offer-lede">Roblox account that includes Korblox Deathspeaker. Login credentials sent after payment confirms.</p>
           <ul class="offer-specs">
             <li><span>Type</span> Full account</li>
-            <li><span>Includes</span> Korblox Deathwalker</li>
+            <li><span>Includes</span> Korblox Deathspeaker</li>
             <li><span>Delivery</span> Credentials after payment</li>
             <li><span>Note</span> Change password on first login</li>
           </ul>
@@ -71,5 +75,8 @@
       <span>Marketplace · 2026</span>
     </div>
   </footer>
+
+  <script src="stars.js"></script>
+  <script src="cursor.js"></script>
 </body>
 </html>

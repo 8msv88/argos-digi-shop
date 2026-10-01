@@ -1,0 +1,36 @@
+(function () {
+  if (window.matchMedia('(pointer: coarse)').matches) {
+    document.body.classList.add('touch');
+    return;
+  }
+
+  var ring = document.getElementById('cursor');
+  var dot = document.getElementById('cursor-dot');
+  if (!ring || !dot) return;
+
+  var x = 0, y = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', function (e) {
+    x = e.clientX;
+    y = e.clientY;
+    dot.style.left = x + 'px';
+    dot.style.top = y + 'px';
+  });
+
+  function loop() {
+    rx += (x - rx) * 0.18;
+    ry += (y - ry) * 0.18;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(loop);
+  }
+  loop();
+
+  var hoverables = 'a, button, input, .offer, .offer-btn, .filter, .nav a, .logo';
+  document.addEventListener('mouseover', function (e) {
+    if (e.target.closest(hoverables)) ring.classList.add('hover');
+  });
+  document.addEventListener('mouseout', function (e) {
+    if (e.target.closest(hoverables)) ring.classList.remove('hover');
+  });
+})();
