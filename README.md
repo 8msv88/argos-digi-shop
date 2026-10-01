@@ -1,12 +1,8 @@
 # Argo's Digi Shop
 
-Minimal digital items store. Featured product: 3000 Robux with embedded NowPayments checkout.
+Two digital listings:
 
-## Pages
+- **3000 Robux** — `3000-robux.html` (NowPayments iid=6103315017)
+- **Discord Nitro 1 Year** — `discord-nitro.html` (NowPayments iid=5102878411)
 
-- `index.html` — Home / catalog
-- `3000-robux.html` — Product page with payment widget
-
-## Deploy
-
-Static site. Works on Vercel, Netlify, or any static host.
+Static HTML. Deploy on Vercel or any static host.
