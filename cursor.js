@@ -8,7 +8,10 @@
   var dot = document.getElementById('cursor-dot');
   if (!ring || !dot) return;
 
-  var x = 0, y = 0, rx = 0, ry = 0;
+  var x = 0;
+  var y = 0;
+  var rx = 0;
+  var ry = 0;
 
   document.addEventListener('mousemove', function (e) {
     x = e.clientX;
@@ -26,7 +29,7 @@
   }
   loop();
 
-  var hoverables = 'a, button, input, .offer, .offer-btn, .filter, .nav a, .logo';
+  var hoverables = 'a, button, .offer, .btn-primary, .btn-header, .btn-ghost, .nav a, .brand';
   document.addEventListener('mouseover', function (e) {
     if (e.target.closest(hoverables)) ring.classList.add('hover');
   });

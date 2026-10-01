@@ -1,8 +1,24 @@
-# Argo's Digi Shop
+# Argo — Digital Marketplace
 
-Two digital listings:
+Static storefront for curated digital goods.
 
-- **3000 Robux** — `3000-robux.html` (NowPayments iid=6103315017)
-- **Discord Nitro 1 Year** — `discord-nitro.html` (NowPayments iid=5102878411)
+## Offers
 
-Static HTML. Deploy on Vercel or any static host.
+| # | Product | Widget IID |
+|---|---------|------------|
+| 01 | 3000 Robux | `6103315017` |
+| 02 | Discord Nitro — 1 Year | `5102878411` |
+| 03 | Headless Account | `5102878411` |
+| 04 | Korblox Account (Deathspeaker) | `5102878411` |
+
+Payments via [NowPayments](https://nowpayments.io) embeds.
+
+## Stack
+
+- Static HTML / CSS / light JS
+- Instrument Serif + Inter
+- Optional starfield + custom cursor (disabled on touch / reduced motion)
+
+## Deploy
+
+Connect this repo to Vercel (or any static host). Root is the site.
