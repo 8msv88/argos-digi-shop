@@ -19,27 +19,49 @@
     <div class="wrap header-row">
       <a href="index.html" class="logo">Argo's Digi Shop</a>
       <div class="header-search">
-        <input type="search" placeholder="Search listings…" aria-label="Search" disabled>
+        <input type="search" placeholder="Search offers…" aria-label="Search" disabled>
       </div>
       <nav class="nav">
-        <a href="#listings">All offers</a>
+        <a href="#listings">Offers</a>
         <a href="#faq">Help</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <section class="trust-strip">
+      <div class="wrap trust-row">
+        <div class="trust-item">
+          <span class="trust-icon">✓</span>
+          <span>Secure checkout</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">✓</span>
+          <span>Delivery after payment</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">✓</span>
+          <span>Crypto accepted</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">✓</span>
+          <span>No password required*</span>
+        </div>
+      </div>
+    </section>
+
     <section class="market-bar">
       <div class="wrap market-bar-inner">
         <div>
-          <h1>Marketplace</h1>
-          <p>Digital goods from a single seller. Pay via NowPayments.</p>
+          <p class="eyebrow">Digital goods marketplace</p>
+          <h1>Browse offers</h1>
+          <p class="market-sub">Robux, Nitro, and limited accounts. One seller. Checkout via NowPayments.</p>
         </div>
         <div class="seller-chip">
           <span class="seller-avatar">A</span>
           <div>
-            <strong>Argo</strong>
-            <span>Verified seller · 4 offers</span>
+            <strong>Argo <span class="badge-verified">Verified</span></strong>
+            <span>4 active offers</span>
           </div>
         </div>
       </div>
@@ -51,7 +73,7 @@
         <span class="filter">Roblox</span>
         <span class="filter">Discord</span>
         <span class="filter">Accounts</span>
-        <span class="result-count">4 offers</span>
+        <span class="result-count">Showing 4 offers</span>
       </div>
     </section>
 
@@ -64,13 +86,17 @@
             <span class="offer-stock">In stock</span>
           </div>
           <h2>3000 Robux</h2>
-          <p class="offer-desc">Robux credit delivered after payment confirms.</p>
+          <p class="offer-desc">Currency credit. Delivered after payment confirms.</p>
+          <ul class="offer-meta">
+            <li>Digital delivery</li>
+            <li>No password needed</li>
+          </ul>
           <div class="offer-bottom">
             <div class="offer-price">
-              <span class="price-label">From</span>
-              <span class="price-val">Checkout</span>
+              <span class="price-label">Price</span>
+              <span class="price-val">See checkout</span>
             </div>
-            <span class="offer-btn">Buy</span>
+            <span class="offer-btn">View offer</span>
           </div>
         </a>
 
@@ -80,13 +106,17 @@
             <span class="offer-stock">In stock</span>
           </div>
           <h2>Discord Nitro — 1 Year</h2>
-          <p class="offer-desc">12 months Nitro. Code or gift after payment.</p>
+          <p class="offer-desc">12-month Nitro. Code or gift after payment.</p>
+          <ul class="offer-meta">
+            <li>Code / gift delivery</li>
+            <li>No password needed</li>
+          </ul>
           <div class="offer-bottom">
             <div class="offer-price">
-              <span class="price-label">From</span>
-              <span class="price-val">Checkout</span>
+              <span class="price-label">Price</span>
+              <span class="price-val">See checkout</span>
             </div>
-            <span class="offer-btn">Buy</span>
+            <span class="offer-btn">View offer</span>
           </div>
         </a>
 
@@ -96,13 +126,17 @@
             <span class="offer-stock">In stock</span>
           </div>
           <h2>Headless Account</h2>
-          <p class="offer-desc">Roblox account with Headless Head included.</p>
+          <p class="offer-desc">Full account with Headless Head included.</p>
+          <ul class="offer-meta">
+            <li>Credentials after pay</li>
+            <li>Change password on login</li>
+          </ul>
           <div class="offer-bottom">
             <div class="offer-price">
-              <span class="price-label">From</span>
-              <span class="price-val">Checkout</span>
+              <span class="price-label">Price</span>
+              <span class="price-val">See checkout</span>
             </div>
-            <span class="offer-btn">Buy</span>
+            <span class="offer-btn">View offer</span>
           </div>
         </a>
 
@@ -112,17 +146,22 @@
             <span class="offer-stock">In stock</span>
           </div>
           <h2>Korblox Account</h2>
-          <p class="offer-desc">Roblox account with Korblox Deathspeaker included.</p>
+          <p class="offer-desc">Full account with Korblox Deathspeaker included.</p>
+          <ul class="offer-meta">
+            <li>Credentials after pay</li>
+            <li>Change password on login</li>
+          </ul>
           <div class="offer-bottom">
             <div class="offer-price">
-              <span class="price-label">From</span>
-              <span class="price-val">Checkout</span>
+              <span class="price-label">Price</span>
+              <span class="price-val">See checkout</span>
             </div>
-            <span class="offer-btn">Buy</span>
+            <span class="offer-btn">View offer</span>
           </div>
         </a>
 
       </div>
+      <p class="listings-note wrap">* Currency and Nitro offers do not require your existing account password. Account offers are new credentials after payment.</p>
     </section>
 
     <section class="faq" id="faq">
@@ -131,15 +170,15 @@
         <div class="faq-grid">
           <div class="faq-item">
             <h3>How delivery works</h3>
-            <p>Pay on the offer page. After the payment confirms, the order is fulfilled — credit, code, or account credentials as listed.</p>
+            <p>Open an offer, pay through the widget, wait for confirmation. Credit, code, or login details are sent as listed on the offer page.</p>
           </div>
           <div class="faq-item">
             <h3>Payment</h3>
-            <p>Checkout runs through NowPayments. Supported methods (including crypto) appear in the widget.</p>
+            <p>Checkout is handled by NowPayments. Supported methods, including crypto, appear inside the payment widget.</p>
           </div>
           <div class="faq-item">
             <h3>Account offers</h3>
-            <p>Headless and Korblox are full accounts. Change the password after login. Never send passwords for accounts you already own.</p>
+            <p>Headless and Korblox are full accounts. Change the password after first login. Never share passwords for accounts you already own.</p>
           </div>
         </div>
       </div>
@@ -149,7 +188,7 @@
   <footer class="footer">
     <div class="wrap footer-row">
       <span>Argo's Digi Shop</span>
-      <span>Marketplace · 2026</span>
+      <span>Payments via NowPayments · 2026</span>
     </div>
   </footer>
 

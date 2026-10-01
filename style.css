@@ -6,7 +6,7 @@
 
 :root {
   --bg: #07090f;
-  --surface: rgba(16, 20, 30, 0.85);
+  --surface: rgba(16, 20, 30, 0.88);
   --surface-solid: #10141e;
   --ink: #eef0f5;
   --ink-soft: #b4bac8;
@@ -102,29 +102,14 @@ main,
   z-index: 1;
 }
 
-/* Intro animation */
 @keyframes intro-fade {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes intro-logo {
-  0% {
-    opacity: 0;
-    transform: translateY(-8px);
-    letter-spacing: 0.12em;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    letter-spacing: -0.02em;
-  }
+  0% { opacity: 0; transform: translateY(-8px); letter-spacing: 0.12em; }
+  100% { opacity: 1; transform: translateY(0); letter-spacing: -0.02em; }
 }
 
 .logo {
@@ -136,30 +121,34 @@ main,
   animation: intro-fade 0.6s ease 0.15s both;
 }
 
+.trust-strip {
+  animation: intro-fade 0.55s ease 0.2s both;
+}
+
 .market-bar-inner > div:first-child {
-  animation: intro-fade 0.7s ease 0.25s both;
+  animation: intro-fade 0.7s ease 0.28s both;
 }
 
 .market-bar-inner .seller-chip {
-  animation: intro-fade 0.7s ease 0.35s both;
+  animation: intro-fade 0.7s ease 0.36s both;
 }
 
 .filters-bar {
-  animation: intro-fade 0.6s ease 0.4s both;
+  animation: intro-fade 0.6s ease 0.42s both;
 }
 
 .offer {
   animation: intro-fade 0.55s ease both;
 }
 
-.offer:nth-child(1) { animation-delay: 0.48s; }
-.offer:nth-child(2) { animation-delay: 0.58s; }
-.offer:nth-child(3) { animation-delay: 0.68s; }
-.offer:nth-child(4) { animation-delay: 0.78s; }
+.offer:nth-child(1) { animation-delay: 0.5s; }
+.offer:nth-child(2) { animation-delay: 0.6s; }
+.offer:nth-child(3) { animation-delay: 0.7s; }
+.offer:nth-child(4) { animation-delay: 0.8s; }
 
 /* Header */
 .header {
-  background: rgba(7, 9, 15, 0.75);
+  background: rgba(7, 9, 15, 0.8);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
@@ -221,11 +210,39 @@ main,
   color: var(--ink);
 }
 
+/* Trust strip */
+.trust-strip {
+  border-bottom: 1px solid var(--line);
+  background: rgba(16, 20, 30, 0.65);
+  padding: 0.7rem 0;
+}
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  justify-content: center;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.trust-icon {
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+
 /* Market bar */
 .market-bar {
-  background: rgba(16, 20, 30, 0.55);
+  background: rgba(16, 20, 30, 0.5);
   border-bottom: 1px solid var(--line);
-  padding: 1.75rem 0;
+  padding: 1.85rem 0;
   backdrop-filter: blur(8px);
 }
 
@@ -236,16 +253,26 @@ main,
   gap: 1.5rem;
 }
 
-.market-bar h1 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.2rem;
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
 }
 
-.market-bar p {
+.market-bar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.35rem;
+}
+
+.market-sub {
   color: var(--muted);
   font-size: 0.9rem;
+  max-width: 42ch;
 }
 
 .seller-chip {
@@ -278,9 +305,22 @@ main,
 }
 
 .seller-chip strong {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+.badge-verified {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.12rem 0.4rem;
+  border-radius: 4px;
 }
 
 .seller-chip span {
@@ -292,7 +332,7 @@ main,
 .filters-bar {
   padding: 1rem 0;
   border-bottom: 1px solid var(--line);
-  background: rgba(16, 20, 30, 0.4);
+  background: rgba(16, 20, 30, 0.35);
 }
 
 .filters-row {
@@ -327,7 +367,7 @@ main,
 
 /* Listings */
 .listings {
-  padding: 2rem 0 3.5rem;
+  padding: 2rem 0 2.5rem;
 }
 
 .listings-grid {
@@ -352,7 +392,7 @@ main,
 .offer:hover {
   border-color: rgba(94, 234, 212, 0.35);
   box-shadow: 0 0 24px rgba(94, 234, 212, 0.08);
-  background: rgba(20, 26, 38, 0.9);
+  background: rgba(20, 26, 38, 0.92);
 }
 
 .offer-top {
@@ -389,15 +429,37 @@ main,
 .offer-desc {
   color: var(--muted);
   font-size: 0.875rem;
-  flex: 1;
+  margin-bottom: 0.75rem;
+}
+
+.offer-meta {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
   margin-bottom: 1rem;
+  flex: 1;
+}
+
+.offer-meta li {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  padding-left: 0.85rem;
+  position: relative;
+}
+
+.offer-meta li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
 }
 
 .offer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.9rem;
+  padding-top: 0.95rem;
   border-top: 1px solid var(--line);
 }
 
@@ -419,7 +481,7 @@ main,
   font-weight: 600;
   background: var(--ink);
   color: var(--bg);
-  padding: 0.45rem 0.9rem;
+  padding: 0.5rem 0.95rem;
   border-radius: 7px;
   transition: background 0.15s, color 0.15s;
 }
@@ -427,6 +489,12 @@ main,
 .offer:hover .offer-btn {
   background: var(--accent);
   color: #042f2e;
+}
+
+.listings-note {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--muted);
 }
 
 /* FAQ */
@@ -616,6 +684,10 @@ main,
   .header-search {
     display: none;
   }
+
+  .trust-row {
+    justify-content: flex-start;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -626,6 +698,7 @@ main,
   .logo,
   .header-search,
   .nav,
+  .trust-strip,
   .market-bar-inner > div:first-child,
   .market-bar-inner .seller-chip,
   .filters-bar,
