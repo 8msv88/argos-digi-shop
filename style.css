@@ -102,6 +102,61 @@ main,
   z-index: 1;
 }
 
+/* Intro animation */
+@keyframes intro-fade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes intro-logo {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+    letter-spacing: 0.12em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: -0.02em;
+  }
+}
+
+.logo {
+  animation: intro-logo 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.header-search,
+.nav {
+  animation: intro-fade 0.6s ease 0.15s both;
+}
+
+.market-bar-inner > div:first-child {
+  animation: intro-fade 0.7s ease 0.25s both;
+}
+
+.market-bar-inner .seller-chip {
+  animation: intro-fade 0.7s ease 0.35s both;
+}
+
+.filters-bar {
+  animation: intro-fade 0.6s ease 0.4s both;
+}
+
+.offer {
+  animation: intro-fade 0.55s ease both;
+}
+
+.offer:nth-child(1) { animation-delay: 0.48s; }
+.offer:nth-child(2) { animation-delay: 0.58s; }
+.offer:nth-child(3) { animation-delay: 0.68s; }
+.offer:nth-child(4) { animation-delay: 0.78s; }
+
 /* Header */
 .header {
   background: rgba(7, 9, 15, 0.75);
@@ -170,7 +225,7 @@ main,
 .market-bar {
   background: rgba(16, 20, 30, 0.55);
   border-bottom: 1px solid var(--line);
-  padding: 1.5rem 0;
+  padding: 1.75rem 0;
   backdrop-filter: blur(8px);
 }
 
@@ -235,7 +290,7 @@ main,
 
 /* Filters */
 .filters-bar {
-  padding: 0.85rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--line);
   background: rgba(16, 20, 30, 0.4);
 }
@@ -272,20 +327,20 @@ main,
 
 /* Listings */
 .listings {
-  padding: 1.5rem 0 3rem;
+  padding: 2rem 0 3.5rem;
 }
 
 .listings-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .offer {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 1.2rem 1.25rem;
+  padding: 1.35rem 1.4rem;
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -538,6 +593,7 @@ main,
 @media (max-width: 800px) {
   .listings-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .faq-grid {
@@ -565,5 +621,15 @@ main,
 @media (prefers-reduced-motion: reduce) {
   .cursor {
     transition: none;
+  }
+
+  .logo,
+  .header-search,
+  .nav,
+  .market-bar-inner > div:first-child,
+  .market-bar-inner .seller-chip,
+  .filters-bar,
+  .offer {
+    animation: none !important;
   }
 }
