@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listings — Argo</title>
+  <meta name="description" content="All Argo offers: 3000 Robux, Discord Nitro, Headless, Korblox, and Korblox & Headless bundle.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Argo
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="listings.html" aria-current="page">Listings</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a href="listings.html" class="btn-header">View listings</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalog catalog-page">
+      <div class="shell">
+        <header class="section-head">
+          <div>
+            <p class="kicker">Catalog</p>
+            <h2>Listings</h2>
+          </div>
+          <p>5 offers · Select one to open checkout</p>
+        </header>
+
+        <ol class="offer-list">
+          <li>
+            <a href="3000-robux.html" class="offer">
+              <span class="offer-num">01</span>
+              <div class="offer-main">
+                <div class="offer-tags">
+                  <span class="tag">Roblox</span>
+                  <span class="stock">In stock</span>
+                </div>
+                <h3>3000 Robux</h3>
+                <p>Currency credit after payment confirms. No password required.</p>
+              </div>
+              <div class="offer-action">
+                <span class="offer-cta">Checkout</span>
+                <span class="offer-arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="discord-nitro.html" class="offer">
+              <span class="offer-num">02</span>
+              <div class="offer-main">
+                <div class="offer-tags">
+                  <span class="tag">Discord</span>
+                  <span class="stock">In stock</span>
+                </div>
+                <h3>Discord Nitro — 1 Year</h3>
+                <p>Twelve months. Code or gift delivery after payment.</p>
+              </div>
+              <div class="offer-action">
+                <span class="offer-cta">Checkout</span>
+                <span class="offer-arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="headless-account.html" class="offer">
+              <span class="offer-num">03</span>
+              <div class="offer-main">
+                <div class="offer-tags">
+                  <span class="tag">Account</span>
+                  <span class="stock">In stock</span>
+                </div>
+                <h3>Headless Account</h3>
+                <p>Full account with Headless Head. Credentials after payment.</p>
+              </div>
+              <div class="offer-action">
+                <span class="offer-cta">Checkout</span>
+                <span class="offer-arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="korblox-account.html" class="offer">
+              <span class="offer-num">04</span>
+              <div class="offer-main">
+                <div class="offer-tags">
+                  <span class="tag">Account</span>
+                  <span class="stock">In stock</span>
+                </div>
+                <h3>Korblox Account</h3>
+                <p>Full account with Korblox Deathspeaker. Credentials after payment.</p>
+              </div>
+              <div class="offer-action">
+                <span class="offer-cta">Checkout</span>
+                <span class="offer-arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="korblox-headless.html" class="offer">
+              <span class="offer-num">05</span>
+              <div class="offer-main">
+                <div class="offer-tags">
+                  <span class="tag">Bundle</span>
+                  <span class="stock">In stock</span>
+                </div>
+                <h3>Korblox &amp; Headless</h3>
+                <p>Full account with both Korblox Deathspeaker and Headless Head. Credentials after payment.</p>
+              </div>
+              <div class="offer-action">
+                <span class="offer-cta">Checkout</span>
+                <span class="offer-arrow" aria-hidden="true">→</span>
+              </div>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark small" aria-hidden="true"></span>
+        Argo
+      </div>
+      <p>Digital goods · NowPayments · 2026</p>
+    </div>
+  </footer>
+
+  <script src="stars.js"></script>
+  <script src="cursor.js"></script>
+</body>
+</html>

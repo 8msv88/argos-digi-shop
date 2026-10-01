@@ -48,7 +48,6 @@ body.touch {
   cursor: auto;
 }
 
-/* Background layers */
 #stars {
   position: fixed;
   inset: 0;
@@ -68,7 +67,6 @@ body.touch {
   background-size: 180px;
 }
 
-/* Custom cursor */
 .cursor,
 .cursor-dot {
   position: fixed;
@@ -106,7 +104,6 @@ body.touch .cursor-dot {
   display: none;
 }
 
-/* Shell */
 .shell {
   width: 100%;
   max-width: 1040px;
@@ -123,65 +120,39 @@ main,
   z-index: 1;
 }
 
-/* Focus */
 a:focus-visible,
 button:focus-visible {
   outline: none;
   box-shadow: var(--focus);
 }
 
-/* Motion */
 @keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes brand-in {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-    filter: blur(3px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
+  from { opacity: 0; transform: translateY(-6px); filter: blur(3px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 
-.brand {
-  animation: brand-in 0.85s var(--ease) both;
-}
-
+.brand { animation: brand-in 0.85s var(--ease) both; }
 .nav,
-.btn-header {
-  animation: rise 0.65s var(--ease) 0.1s both;
-}
+.btn-header { animation: rise 0.65s var(--ease) 0.1s both; }
+.hero-brand-inner { animation: rise 0.85s var(--ease) 0.15s both; }
+.about-grid > * { animation: rise 0.6s var(--ease) both; }
+.about-copy { animation-delay: 0.2s; }
+.about-seller { animation-delay: 0.28s; }
+.about-steps { animation-delay: 0.36s; }
+.about-cta { animation-delay: 0.44s; }
 
-.hero-copy {
-  animation: rise 0.8s var(--ease) 0.18s both;
-}
+.offer-list > li { animation: rise 0.55s var(--ease) both; }
+.offer-list > li:nth-child(1) { animation-delay: 0.15s; }
+.offer-list > li:nth-child(2) { animation-delay: 0.22s; }
+.offer-list > li:nth-child(3) { animation-delay: 0.29s; }
+.offer-list > li:nth-child(4) { animation-delay: 0.36s; }
+.offer-list > li:nth-child(5) { animation-delay: 0.43s; }
 
-.hero-aside {
-  animation: rise 0.8s var(--ease) 0.28s both;
-}
-
-.offer-list > li {
-  animation: rise 0.55s var(--ease) both;
-}
-
-.offer-list > li:nth-child(1) { animation-delay: 0.4s; }
-.offer-list > li:nth-child(2) { animation-delay: 0.48s; }
-.offer-list > li:nth-child(3) { animation-delay: 0.56s; }
-.offer-list > li:nth-child(4) { animation-delay: 0.64s; }
-
-/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -237,7 +208,8 @@ button:focus-visible {
   transition: color 0.15s;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a[aria-current="page"] {
   color: var(--text);
 }
 
@@ -257,17 +229,16 @@ button:focus-visible {
   color: var(--accent-ink);
 }
 
-/* Hero */
-.hero {
-  padding: 4.5rem 0 3.75rem;
+/* Brand hero */
+.hero-brand {
+  padding: 6.5rem 0 5.5rem;
   border-bottom: 1px solid var(--line);
+  text-align: center;
 }
 
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 3rem;
-  align-items: end;
+.hero-brand-inner {
+  max-width: 36rem;
+  margin: 0 auto;
 }
 
 .kicker {
@@ -279,26 +250,26 @@ button:focus-visible {
   margin-bottom: 1.1rem;
 }
 
-.hero h1 {
+.hero-brand h1 {
   font-family: var(--serif);
-  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-size: clamp(3.5rem, 12vw, 6rem);
   font-weight: 400;
-  line-height: 1.06;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.15rem;
-}
-
-.hero h1 em {
-  font-style: italic;
-  color: var(--text-2);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.35rem;
 }
 
 .lead {
   color: var(--text-2);
-  font-size: 1.02rem;
-  max-width: 34ch;
+  font-size: 1.05rem;
   line-height: 1.65;
-  margin-bottom: 1.85rem;
+  margin-bottom: 2rem;
+}
+
+.lead-wide {
+  max-width: 32ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-actions {
@@ -306,6 +277,7 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: 0.75rem;
   align-items: center;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -316,7 +288,7 @@ button:focus-visible {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  padding: 0.75rem 1.2rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 999px;
   transition: transform 0.15s var(--ease), box-shadow 0.15s;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 8px 22px rgba(125, 211, 192, 0.18);
@@ -340,38 +312,45 @@ button:focus-visible {
   color: var(--text);
 }
 
-.hero-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+/* About on home */
+.about {
+  padding: 4rem 0 5rem;
 }
 
-.stat-grid {
+.about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 2rem;
 }
 
-.stat {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.1rem 1rem;
-  backdrop-filter: blur(12px);
-}
-
-.stat-num {
-  display: block;
+.about-copy h2 {
   font-family: var(--serif);
-  font-size: 1.7rem;
+  font-size: 1.65rem;
+  font-weight: 400;
   letter-spacing: -0.02em;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.65rem;
 }
 
-.stat-label {
-  font-size: 0.72rem;
-  color: var(--text-3);
-  font-weight: 500;
+.about-copy p {
+  color: var(--text-2);
+  max-width: 48ch;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.about-seller {
+  width: fit-content;
+}
+
+.about-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.about-cta {
+  margin-top: 0.5rem;
 }
 
 .seller {
@@ -429,14 +408,48 @@ button:focus-visible {
   margin-top: 0.08rem;
 }
 
-/* Catalog */
-.catalog {
-  padding: 3.75rem 0 3.25rem;
+.step {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.25rem;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.2s;
+}
+
+.step:hover {
+  border-color: var(--line-2);
+}
+
+.step-num {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.step h3 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.015em;
+}
+
+.step p {
+  color: var(--text-3);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+/* Listings page */
+.catalog-page {
+  padding: 3rem 0 4.5rem;
 }
 
 .section-head {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.5rem;
@@ -446,7 +459,7 @@ button:focus-visible {
 
 .section-head h2 {
   font-family: var(--serif);
-  font-size: 1.55rem;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: -0.02em;
 }
@@ -523,7 +536,7 @@ button:focus-visible {
 .offer-main p {
   color: var(--text-3);
   font-size: 0.88rem;
-  max-width: 42ch;
+  max-width: 44ch;
 }
 
 .offer-action {
@@ -542,54 +555,6 @@ button:focus-visible {
   font-size: 1.1rem;
   color: var(--text-3);
   transition: transform 0.2s var(--ease), color 0.15s;
-}
-
-/* How */
-.how {
-  padding: 3.25rem 0 4.5rem;
-  border-top: 1px solid var(--line);
-  background: rgba(11, 13, 20, 0.5);
-}
-
-.steps {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.step {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.4rem 1.25rem;
-  backdrop-filter: blur(10px);
-  transition: border-color 0.2s;
-}
-
-.step:hover {
-  border-color: var(--line-2);
-}
-
-.step-num {
-  font-family: var(--serif);
-  font-size: 0.95rem;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-.step h3 {
-  font-size: 1.02rem;
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-  letter-spacing: -0.015em;
-}
-
-.step p {
-  color: var(--text-3);
-  font-size: 0.88rem;
-  line-height: 1.55;
 }
 
 /* Product */
@@ -719,7 +684,6 @@ button:focus-visible {
   border: none;
 }
 
-/* Footer */
 .site-footer {
   margin-top: auto;
   border-top: 1px solid var(--line);
@@ -748,20 +712,14 @@ button:focus-visible {
   font-size: 0.8rem;
 }
 
-/* Responsive */
 @media (max-width: 840px) {
-  .hero-inner,
   .product-grid,
-  .steps {
+  .about-steps {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding: 3rem 0 2.75rem;
-  }
-
-  .hero-aside {
-    max-width: 340px;
+  .hero-brand {
+    padding: 4.5rem 0 4rem;
   }
 
   .offer {
@@ -783,7 +741,7 @@ button:focus-visible {
   .section-head {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.3rem;
+    gap: 0.35rem;
   }
 }
 
@@ -791,8 +749,8 @@ button:focus-visible {
   .brand,
   .nav,
   .btn-header,
-  .hero-copy,
-  .hero-aside,
+  .hero-brand-inner,
+  .about-grid > *,
   .offer-list > li {
     animation: none !important;
   }
