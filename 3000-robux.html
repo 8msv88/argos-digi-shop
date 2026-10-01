@@ -8,37 +8,47 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="header">
     <div class="wrap header-row">
       <a href="index.html" class="logo">Argo's Digi Shop</a>
       <nav class="nav">
-        <a href="index.html#index">Index</a>
-        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#listings">All offers</a>
+        <a href="index.html#faq">Help</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="product">
-      <div class="wrap product-grid">
-        <div class="product-copy">
-          <p class="crumb"><a href="index.html">Index</a> · 01</p>
-          <p class="eyebrow">Roblox</p>
+    <section class="offer-page">
+      <div class="wrap offer-layout">
+        <div class="offer-detail">
+          <p class="breadcrumb"><a href="index.html">Marketplace</a> / 3000 Robux</p>
+          <div class="offer-detail-head">
+            <span class="offer-cat">Roblox</span>
+            <span class="offer-stock">In stock</span>
+          </div>
           <h1>3000 Robux</h1>
-          <p class="product-lede">Robux credit processed after payment confirms. Use the widget on this page to complete checkout.</p>
-          <ul class="bullets">
-            <li>3000 Robux credit</li>
-            <li>Fulfilled after payment confirmation</li>
-            <li>No password required</li>
+          <p class="offer-lede">Robux credit processed after payment confirms. Complete checkout with the widget on this page.</p>
+          <ul class="offer-specs">
+            <li><span>Type</span> Currency credit</li>
+            <li><span>Amount</span> 3000 Robux</li>
+            <li><span>Delivery</span> After payment confirmation</li>
+            <li><span>Password</span> Not required</li>
           </ul>
-          <a href="index.html" class="back">← Index</a>
+          <div class="seller-chip inline">
+            <span class="seller-avatar">A</span>
+            <div>
+              <strong>Argo</strong>
+              <span>Verified seller</span>
+            </div>
+          </div>
         </div>
-        <div class="checkout">
-          <h2>Checkout</h2>
-          <p class="checkout-note">Complete payment below.</p>
+        <div class="checkout-panel">
+          <h2>Buy now</h2>
+          <p class="checkout-note">Secure payment via NowPayments</p>
           <div class="widget">
             <iframe
               src="https://nowpayments.io/embeds/payment-widget?iid=6103315017"
@@ -58,7 +68,7 @@
   <footer class="footer">
     <div class="wrap footer-row">
       <span>Argo's Digi Shop</span>
-      <span>2026</span>
+      <span>Marketplace · 2026</span>
     </div>
   </footer>
 </body>
