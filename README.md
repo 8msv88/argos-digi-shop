@@ -1,8 +1,8 @@
-# Argo — Digital Marketplace
+# Argo
 
-Conversion-focused static storefront for curated digital goods.
+Minimal digital goods storefront.
 
-## Offers
+## Products
 
 | Product | Widget IID |
 |---------|------------|
@@ -12,25 +12,4 @@ Conversion-focused static storefront for curated digital goods.
 | Korblox Account | `5102878411` |
 | Korblox & Headless | `5548800291` |
 
-Payments via [NowPayments](https://nowpayments.io) embeds.
-
-## Layout & CRO
-
-Redesigned as a full shop experience:
-
-- Sticky header + promo bar (trust above the fold)
-- Benefits strip (delivery, security, verified seller)
-- Product **card grid** instead of sparse list
-- Homepage hero with value prop, popular shortcuts, social proof
-- Product pages: buy-box layout, sticky checkout, trust cues under specs
-- Footer with shop links and policies
-
-## Stack
-
-- Static HTML / CSS / light JS
-- Instrument Serif + Inter
-- Optional starfield (`stars.js`)
-
-## Deploy
-
-Connect this repo to Vercel (or any static host). Root is the site.
+Payments via NowPayments. Static HTML/CSS.
