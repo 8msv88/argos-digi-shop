@@ -112,38 +112,54 @@ main { flex: 1; }
   letter-spacing: -0.02em;
 }
 
-.offer-list {
-  list-style: none;
-  border-top: 1px solid var(--line);
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  padding-bottom: 3rem;
 }
-.offer {
+@media (min-width: 560px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 860px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+}
+
+.card {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.15rem 0;
-  border-bottom: 1px solid var(--line);
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
   text-decoration: none;
   color: inherit;
-  transition: background 0.15s;
+  min-height: 140px;
+  transition: border-color 0.15s, background 0.15s;
 }
-.offer:hover { background: rgba(255,255,255,0.02); }
-.offer h2 {
+.card:hover {
+  border-color: rgba(255,255,255,0.16);
+  background: #151518;
+}
+.card h2 {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
 }
-.offer .meta {
+.card .meta {
   font-size: 0.8rem;
   color: var(--muted);
-  margin-top: 0.2rem;
+  margin-bottom: auto;
 }
-.offer .go {
-  font-size: 0.875rem;
+.card .go {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: var(--muted);
-  flex-shrink: 0;
 }
-.offer:hover .go { color: var(--text); }
+.card:hover .go { color: var(--text); }
 
 .product {
   padding: 2rem 0 3rem;
